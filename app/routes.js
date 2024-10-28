@@ -23,7 +23,7 @@ router.post('/question-one', function(request, response) {
     var questionOne = request.session.data['whatDoYouNeed']
     if (questionOne == "register"){
         response.redirect("/v1/register-outcome")
-    }if (questionOne == "filing"){
+    } else if (questionOne == "filing"){
             response.redirect("/v1/filing-question")
     } else {
         response.redirect("/v1/generic-outcome")
@@ -37,7 +37,7 @@ router.post('/filing-question', function(request, response) {
     var filingQuestion = request.session.data['filingFilter']
     if (filingQuestion == "confirmationStatement"){
         response.redirect("/v1/outcome-conf-stat")
-    }if (filingQuestion == "filingAccounts"){
+    } else if (filingQuestion == "filingAccounts"){
             response.redirect("/v1/outcome-accounts")
     } else {
         response.redirect("/v1/generic-outcome")
