@@ -1,0 +1,83 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{# {% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %} #}
+{# SmartAnswer doesn't have back links #}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Outcome page
+      </h1>
+
+      <p>
+        This is an outcome page - this is a generic holding place page for now.
+      </p>
+
+      <p>
+        Read more <a href="/path/of/page">about this topic</a>.
+      </p>
+
+      <h2 class="govuk-heading-m">Your answers</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Start again</a>.
+</p>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              1. What do you need to contact Companies House about?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Example
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              2. What do you need help with?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Example
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+
+    </div>
+  </div>
+
+{% endblock %}

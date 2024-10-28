@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+  <span class="govuk-caption-xl">Version 1</span>
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <h2 class="govuk-heading-m" >Version 1 screens - SmartAnswer style</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-link" href="/v1/start">Start</a></li>
+        <li><a class="govuk-link" href="/v1/question-one">First question page</a></li>
+        <li><a class="govuk-link" href="/v1/filing-question">Filing filter question page</a></li>
+       
+       
+      </ul>
+
+      <h2 class="govuk-heading-m" >Outcome pages</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="/v1/register-outcome">Register a company</a></li>
+             <li><a class="govuk-link" href="/v1/outcome-conf-stat">Confirmation statement</a></li>
+            <li><a class="govuk-link" href="/v1/outcome-accounts">Accounts </a></li>
+            <li><a class="govuk-link" href="/v1/generic-outcome">Generic placeholder outcome page </a></li>
+          </ul>
+  </div>
+</div>
+
+{% endblock %}

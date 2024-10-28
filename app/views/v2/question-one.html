@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{# {% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %} #}
+{# SmartAnswer doesn't have back links #}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      
+
+      <form class="form" action="/question-one" method="post">
+      {# Need to create dynamic routing from each radio #}
+
+{# Smart answers makes use of numbers before questions on question pages and captions above #}
+       <span class="govuk-caption-xl">Contact Companies House</span>
+          {{ govukRadios({
+  name: "whatDoYouNeed",
+  fieldset: {
+    legend: {
+      text: " 1. What do you need to contact Companies House about?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "register",
+      text: "Registering a company"
+    },
+    {
+      value: "filing",
+      text: "Filing for a company"
+    },
+    {
+      value: "closingAndRestoring",
+      text: "Closing and restoring a company"
+    },
+    {
+      value: "penalties",
+      text: "Penalties and appeals"
+    },
+    {
+      value: "report",
+      text: "Report an issue or complain"
+    },
+    {
+      value: "somethingElse",
+      text: "Something else"
+    }
+  ]
+}) }}
+        
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
