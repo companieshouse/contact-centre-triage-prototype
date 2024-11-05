@@ -45,7 +45,12 @@ router.post('/filing-question', function(request, response) {
         response.redirect("/v1/outcome-conf-stat")
     } else if (filingQuestion == "filingAccounts"){
             response.redirect("/v1/outcome-accounts")
-    } else {
+    } else if (filingQuestion == "filingLogIn"){
+        response.redirect("/v1/outcome-sign-in")
+    } else if (filingQuestion == "trackFiling"){
+        response.redirect("/v1/outcome-track-filing")
+    } 
+     else {
         response.redirect("/v1/generic-outcome")
     }
 })
