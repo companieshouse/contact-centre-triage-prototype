@@ -66,7 +66,7 @@ router.post('/penalties-question', function(request, response) {
     var penaltiesQuestion = request.session.data['penaltiesFilter']
     if (penaltiesQuestion == "appealingPenalty"){
         response.redirect("/v1/outcome-appeal")
-    } else if (penaltiesQuestion == "penaltiesSomthingElse"){
+    } else if (penaltiesQuestion == "penaltiesSomethingElse"){
             response.redirect("/v1/outcome-something-else")
     } else {
         response.redirect("/v1/generic-outcome")
