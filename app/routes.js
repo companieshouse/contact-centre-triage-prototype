@@ -25,7 +25,13 @@ router.post('/question-one', function(request, response) {
         response.redirect("/v1/register-outcome")
     } else if (questionOne == "filing"){
             response.redirect("/v1/filing-question")
-    } else {
+    } else if (questionOne == "penalties"){
+        response.redirect("/v1/penalties-question")
+    }
+    else if (questionOne == "report"){
+        response.redirect("/v1/company-complaint-question")
+}
+    else {
         response.redirect("/v1/generic-outcome")
     }
 })
@@ -43,5 +49,38 @@ router.post('/filing-question', function(request, response) {
         response.redirect("/v1/generic-outcome")
     }
 })
+
+
+
+// penalties filter question radio routing - incomplete
+
+router.post('/penalties-question', function(request, response) {
+
+    var penaltiesQuestion = request.session.data['penaltiesFilter']
+    if (penaltiesQuestion == "appealingPenalty"){
+        response.redirect("/v1/outcome-appeal")
+    } else if (penaltyQuestion == "penaltiesSomthingElse"){
+            response.redirect("/v1/outcome-something-else")
+    } else {
+        response.redirect("/v1/generic-outcome")
+    }
+})
+
+
+// report filter question radio routing - incomplete
+
+router.post('/company-complaint-question', function(request, response) {
+
+    var complaintQuestion = request.session.data['complaintFilter']
+    if (complaintQuestion == "usingPersonalDetails"){
+        response.redirect("/v1/outcome-personal-details")
+    } else if (complaintQuestion == "complaintSomethingElse"){
+            response.redirect("/v1/outcome-something-else")
+    } else {
+        response.redirect("/v1/generic-outcome")
+    }
+})
+
+
 
 // test-change
