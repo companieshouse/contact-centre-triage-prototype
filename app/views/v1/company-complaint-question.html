@@ -38,12 +38,12 @@
 
       
 
-      <form class="form" action="/penalties-question" method="post">
+      <form class="form" action="/company-complaint-question" method="post">
 
         {# Smart answers makes use of numbers before questions on question pages and captions above #}
        <span class="govuk-caption-xl">Contact Companies House</span>
           {{ govukRadios({
-  name: "penaltiesFilter",
+  name: "complaintFilter",
   fieldset: {
     legend: {
       text: " 2. What do you need help with?",
@@ -53,19 +53,36 @@
   },
   items: [
     {
-      value: "appealingPenalty",
-      text: "Appealing a penalty"
+      value: "object",
+      text: "I want to object to a strike off"
     },
     {
-      value: "payingPenalty",
-      text: "Paying a penalty"
+      value: "usingPersonalDetails",
+      text: "A company is using my personal details without my permission"
     },
     {
-      value: "moreTime",
-      text: "Requesting more time to file"
+      value: "authCodeProblem",
+      text: "There's a problem with my authentication code"
     },
     {
-      value: "penaltiesSomethingElse",
+      value: "cantSignIn",
+      text: "I can't sign in"
+    },
+    {
+      value: "reportInfo",
+      text: "I want to report incorect information on the register"
+    },
+    {
+      value: "companyComplaint",
+      text: "I want to make a complaint about a limited company"
+    },
+    {
+      value: "companiesHouseComplaint",
+      text: "I want to make a complaint about Companies House"
+    },
+    {
+      
+      value: "complaintSomethingElse",
       text: "Something else"
     }
   ]
@@ -88,7 +105,7 @@
               1. What do you need to contact Companies House about?
             </dt>
             <dd class="govuk-summary-list__value">
-              Penalties and appeals
+              Reporting an issue or complaining about a company
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
