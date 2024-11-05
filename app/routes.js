@@ -49,6 +49,8 @@ router.post('/filing-question', function(request, response) {
         response.redirect("/v1/outcome-sign-in")
     } else if (filingQuestion == "trackFiling"){
         response.redirect("/v1/outcome-track-filing")
+    } else if (filingQuestion == "somethingElse"){
+        response.redirect("/v1/outcome-something-else")
     } 
      else {
         response.redirect("/v1/generic-outcome")
