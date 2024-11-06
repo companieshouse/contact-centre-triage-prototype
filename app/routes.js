@@ -30,7 +30,9 @@ router.post('/question-one', function(request, response) {
     }
     else if (questionOne == "report"){
         response.redirect("/v1/company-complaint-question")
-}
+    } else if (questionOne == "somethingElse"){
+        response.redirect("/v1/outcome-something-else")
+    }
     else {
         response.redirect("/v1/generic-outcome")
     }
