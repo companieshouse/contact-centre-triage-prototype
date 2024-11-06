@@ -83,7 +83,10 @@ router.post('/company-complaint-question', function(request, response) {
         response.redirect("/v1/outcome-personal-details")
     } else if (complaintQuestion == "complaintSomethingElse"){
             response.redirect("/v1/outcome-something-else")
-    } else {
+    } else if (complaintQuestion == "cantSignIn"){
+        response.redirect("/v1/outcome-sign-in")
+    }
+    else {
         response.redirect("/v1/generic-outcome")
     }
 })
