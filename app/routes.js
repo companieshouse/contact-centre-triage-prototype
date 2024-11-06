@@ -22,7 +22,7 @@ router.post('/question-one', function(request, response) {
 
     var questionOne = request.session.data['whatDoYouNeed']
     if (questionOne == "register"){
-        response.redirect("/v1/register-outcome")
+        response.redirect("/v1/generic-outcome")
     } else if (questionOne == "filing"){
             response.redirect("/v1/filing-question")
     } else if (questionOne == "penalties"){
@@ -44,7 +44,7 @@ router.post('/filing-question', function(request, response) {
     if (filingQuestion == "confirmationStatement"){
         response.redirect("/v1/outcome-conf-stat")
     } else if (filingQuestion == "filingAccounts"){
-            response.redirect("/v1/outcome-accounts")
+            response.redirect("/v1/generic-outcome")
     } else if (filingQuestion == "filingLogIn"){
         response.redirect("/v1/outcome-sign-in")
     } else if (filingQuestion == "trackFiling"){
