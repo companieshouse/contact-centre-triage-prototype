@@ -134,7 +134,7 @@ router.post('/filing-question', function(request, response) {
     if (filingQuestion == "confirmationStatement"){
         response.redirect("/v2/outcome-conf-stat")
     } else if (filingQuestion == "filingAccounts"){
-            response.redirect("/v2/generic-outcome")
+            response.redirect("/v2/outcome-accounts")
     } else if (filingQuestion == "filingLogIn"){
         response.redirect("/v2/outcome-sign-in")
     } else if (filingQuestion == "trackFiling"){
