@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-//version 1 routing
+//version 1 routing commented out to allow for v2 routing - haven't worked out routing and routes folder yet whoops
 // // start page to first question
 // router.post('/v1/start', function (req, res) {
 
