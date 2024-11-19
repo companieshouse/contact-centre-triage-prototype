@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{# {% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %} #}
+{# SmartAnswer doesn't have back links #}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+  {% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <form class="form" action="/penalties-question" method="post">
+
+        {# Smart answers makes use of numbers before questions on question pages and captions above #}
+       <span class="govuk-caption-xl">Contact Companies House</span>
+          {{ govukRadios({
+  name: "penaltiesFilter",
+  fieldset: {
+    legend: {
+      text: " 2. What do you need help with?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "appealingPenalty",
+      text: "Appealing a penalty"
+    },
+    {
+      value: "payingPenalty",
+      text: "Paying a penalty or fine"
+    },
+    {
+      value: "moreTime",
+      text: "Requesting more time to file"
+    },
+    {
+      value: "penaltiesSomethingElse",
+      text: "Something else"
+    }
+  ]
+}) }}
+{# Need to consider where somewhere else will take a user #}
+        
+
+        {{ govukButton({
+          text: "Next step"
+        }) }}
+
+      </form>
+
+<h2 class="govuk-heading-m">Your answers</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Start again</a>
+</p>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              1. What do you need to contact Companies House about?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Penalties, fines or appeals
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+         
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

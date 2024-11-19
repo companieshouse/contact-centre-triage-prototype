@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v1/start" method="post">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+      <p>Use this service to find contact details or get support for your query. You can get help with tasks such as:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>registering your company</li>
+        <li>filing your confirmation statement</li>
+        <li>filing your company accounts</li>
+        <li>telling us about changes to your company</li>
+        <li>closing a company</li>
+        <li>making a complaint</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        <h3 class="govuk-heading-s">Before you contact us</h3>
+        You may find the answer to your query using our <a href="#" class="govuk-link">chatbot</a>.
+      </div>
+
+
+
+     <!-- <p>You'll usually have the option to contact Companies House through an online form, email, webchat, chatbot, by phone or by post.</p>-->
+
+<br>
+
+      {{ govukButton({
+        text: "Find contact details",
+        href: "",
+        isStartButton: true
+      }) }}
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Set up a private limited company
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Running a limited company: your responsibilities
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}
