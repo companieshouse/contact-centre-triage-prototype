@@ -175,6 +175,8 @@ router.post('/company-complaint-question', function(request, response) {
             response.redirect("/v2/outcome-something-else")
     } else if (complaintQuestion == "cantSignIn"){
         response.redirect("/v2/outcome-sign-in")
+    } else if (complaintQuestion == "companyComplaint"){
+        response.redirect("/v2/outcome-company-complain")
     }
     else {
         response.redirect("/v2/generic-outcome")
