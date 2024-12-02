@@ -1,0 +1,126 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{# {% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %} #}
+{# SmartAnswer doesn't have back links #}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<span class="govuk-caption-xl">What do you need help with?</span>
+      <h1 class="govuk-heading-xl">
+      Something else
+      </h1>
+
+<h2 class="govuk-heading-l">Contact details</h2>
+
+<p class="govuk-body">If you need help, you can contact us in one of the following ways:
+</p>
+
+<h2 class="govuk-heading-m">Phone</h2>
+<p class="govuk-body">Companies House <br>
+  Telephone: 0303 1234 500 <br>
+  <a href="https://www.relayuk.bt.com/" class="govuk-link">Relay UK</a> (if you cannot hear or speak on the phone): 18001 then 0300 373 0995</a><br>
+  Monday to Friday, 8:30am to 6pm <br><br>
+  <a href="https://www.gov.uk/call-charges" class="govuk-link">Find out about call charges</a></p> 
+
+<h3 class="govuk-heading-s">British Sign Language (BSL) video relay service</h3>
+<p class="govuk-body">To use the BSL video relay service you must:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>first <a href="https://www.gov.uk/guidance/using-british-sign-language-to-contact-companies-house" class="govuk-link">check you can use the service</a></li>
+  <li><a href="https://service.signvideo.uk/webrtc//#/oneclickcall?dD1jb21wYW5pZXNob3VzZUBzaWdudmlkZW8udWsmdT1hbm9ueW1vdXMmcD1hbm9ueW1vdXM=" class="govuk-link">go to the video relay service</a></li>
+</ul>
+
+<p>The video relay service uses a free plugin. You may need to change the security settings on your device to install this.</p>
+
+<h2 class="govuk-heading-m">Live chat</h2>
+        <p class="govuk-body">Our <a href="#" class="govuk-link">live chat</a> service is available between 8:30am and 6pm, Monday to Friday. We'll connect you to one of our advisors.
+        </p>
+
+        <h2 class="govuk-heading-m">Online form</h2>
+        <p class="govuk-body">You can use this <a href="#" class="govuk-link">online form</a> to ask your query. We'll respond by email, usually within 2 working days.
+        </p>
+
+
+<h2 class="govuk-heading-m">Post</h2>
+<p>You can also <a href="https://www.gov.uk/government/organisations/companies-house/about/access-and-opening" class="govuk-link">write to Companies House</a>, but you’ll usually get a faster response by using live chat, sending an online form or phoning us.</p>
+
+
+
+
+
+
+
+
+      <h2 class="govuk-heading-l">Your answers</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Start again</a>
+</p>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              1. What do you need to contact Companies House about?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Something else
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              2. What do you need help with?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Something else
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+
+    </div>
+
+  <!--<div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Related topics</h3>
+        <p class="govuk-body"><a href="#" class="govuk-link">Maybe links to top accessed outcome pages?</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Link to other outcome page</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Link to other outcome page</a></p>
+      </div>
+    </div>-->
+
+
+
+  </div>
+
+{% endblock %}
