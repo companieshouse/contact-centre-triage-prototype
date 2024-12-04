@@ -1,0 +1,166 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{# {% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %} #}
+{# SmartAnswer doesn't have back links #}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+  {% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Placeholder: Filing company accounts
+      </h1>
+
+      <p>
+        This is an outcome page. There will be links to guidance etc. There will also be information about how to contact CH.
+      </p>
+
+      <p>
+        Before you contact Companies House, read how to:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-link" href="#">Guidance 1</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">Guidance 2</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">Another relevant link</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="#">Another guidance piece</a>
+  </li>
+</ul>
+
+<h2 class="govuk-heading-m">When to contact Companies House</h2>
+<p>
+        Wait for the processing time before contacting Companies House
+      </p>
+
+<table class="govuk-table">
+  
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Tyoe of application</th>
+      <th scope="col" class="govuk-table__header">Processing time</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">First thing</td>
+      <td class="govuk-table__cell">2 weeks</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Something else</td>
+      <td class="govuk-table__cell">3 weeks</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Another thing</td>
+      <td class="govuk-table__cell">6 to 8 weeks</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 class="govuk-heading-m">By webchat</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Use the webchat service</a> to contact Companies House about registering a company.
+</p>
+
+<h2 class="govuk-heading-m">By phone</h2>
+<div class="govuk-inset-text">
+  <p class="govuk-body govuk-!-margin-bottom-0">Companies House enquiries </p>
+  <p class="govuk-body govuk-!-margin-bottom-0">Telephone: 0300 123 4567 </p>
+  <p class="govuk-body govuk-!-margin-bottom-0">British Sign Language (BSL) <a href="#" class="govuk-link">video relay service</a> if you're on a computer - find out how to <a href="#" class="govuk-link">use the service on a mobile or tablet</a></p>
+  <p class="govuk-body govuk-!-margin-bottom-0">Monday to Friday, 8am to 7pm </p>
+  <p class="govuk-body govuk-!-margin-bottom-0">Saturdays, 8am to 2pm</p>
+  <p class="govuk-body"><a href="#" class="govuk-link">Find out about call charges</a></p> 
+</div>
+
+
+<h2 class="govuk-heading-m">By email</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Use this webform</a> to contact Companies House about registering a company.
+</p>
+
+<h2 class="govuk-heading-m">By post</h2>
+<div class="govuk-inset-text">
+  <p class="govuk-body govuk-!-margin-bottom-0">Companies House customer services</p>
+  <p class="govuk-body govuk-!-margin-bottom-0">A street address </p>
+  <p class="govuk-body govuk-!-margin-bottom-0">City</p>
+  <p class="govuk-body govuk-!-margin-bottom-0">Post code</p>
+  
+</div>
+
+      <h2 class="govuk-heading-m">Your answers</h2>
+<p class="govuk-body"><a href="#" class="govuk-link">Start again</a>.
+</p>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              1. What do you need to contact Companies House about?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Filing for a company
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              2. What do you need help with?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Filing accounts
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+
+    </div>
+
+   <div class="govuk-grid-row">
+      
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Related topics</h3>
+        <p class="govuk-body"><a href="/v3/outcome-conf-stat" class="govuk-link">Filing a confirmation statement</a></p>
+        <p class="govuk-body"><a href="/v3/generic-outcome" class="govuk-link">Filing a change or update to a company</a></p>
+        <p class="govuk-body"><a href="/v3/outcome-track-filing" class="govuk-link">Tacking the progress of a filing</a></p>
+        <p class="govuk-body"><a href="/v3/outcome-sign-in" class="govuk-link">An issue with signing in</a></p>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
