@@ -51,6 +51,8 @@ router.post('/v3/filing-question', function(request, response) {
         response.redirect("/v3/outcome-conf-stat")
     } else if (filingQuestion == "filingAccounts"){
             response.redirect("/v3/outcome-accounts")
+    } else if (filingQuestion == "changeFiling"){
+        response.redirect("/v3/filing-sub-question")
     } else if (filingQuestion == "filingLogIn"){
         response.redirect("/v3/outcome-sign-in")
     } else if (filingQuestion == "trackFiling"){
@@ -62,6 +64,27 @@ router.post('/v3/filing-question', function(request, response) {
         response.redirect("/v3/generic-outcome")
     }
 })
+
+
+// filing update or change sub question routing
+
+router.post('/v3/filing-sub-question', function(request, response) {
+
+    var updateQuestion = request.session.data['updateFilter']
+    if (updateQuestion == "directorUpdate"){
+        response.redirect("/v3/generic-outcome")
+    } else if (updateQuestion == "pscChanges"){
+            response.redirect("/v3/generic-outcome")
+    } else if (updateQuestion == "fileShares"){
+        response.redirect("/v3/outcome-shares")
+    } else if (updateQuestion == "somethingElse"){
+        response.redirect("/v3/outcome-something-else")
+    } 
+     else {
+        response.redirect("/v3/generic-outcome")
+    }
+})
+
 
 
 
