@@ -26,7 +26,7 @@ router.post('/v3/question-one', function(request, response) {
 
     var questionOne = request.session.data['whatDoYouNeed']
     if (questionOne == "register"){
-        response.redirect("/v3/generic-outcome")
+        response.redirect("/v3/register-outcome")
     } else if (questionOne == "filing"){
             response.redirect("/v3/filing-question")
     } else if (questionOne == "penalties"){
