@@ -38,35 +38,51 @@
 
       
 
-      <form class="form" action="filing-question" method="post">
+      <form class="form" action="maintain-company" method="post">
 
         {# Smart answers makes use of numbers before questions on question pages and captions above #}
        <span class="govuk-caption-xl">Contact Companies House</span>
           {{ govukRadios({
-  name: "filingFilter",
+  name: "maintainFilter",
   fieldset: {
     legend: {
-      text: " 2. What do you need help with?",
+      text: " 2. What do you need to update?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "confirmationStatement",
-      text: "Confirmation statement"
+      value: "registeredEmailAddress",
+      text: "Registered email address"
     },
     {
-      value: "filingAccounts",
-      text: "Company accounts"
+      value: "registeredOfficeAddress",
+      text: "Registered office address"
     },
     {
-      value: "trackFiling",
-      text: "Tracking the progress of a filing"
+      value: "directors",
+      text: "Directors"
     },
     {
-      value: "requestingTime",
-      text: "Request more time to file"
+      value: "secretaries",
+      text: "Company secretaries"
+    },
+    {
+      value: "personsSignificantControl",
+      text: "Persons with significant control (PSCs)"
+    },
+    {
+      value: "shareCapital",
+      text: "Share capital and shareholders"
+    },
+    {
+      value: "companyName",
+      text: "Change company name"
+    },
+    {
+      value: "trackFiling2",
+      text: "Track a filing"
     },
     {
       
