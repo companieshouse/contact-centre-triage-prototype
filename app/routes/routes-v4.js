@@ -30,13 +30,16 @@ router.post('/v4/question-one', function(request, response) {
     } else if (questionOne == "filing"){
             response.redirect("/v4/filing-question")
     } else if (questionOne == "maintaining"){
-        response.redirect("/v4/generic-outcome")
+        response.redirect("/v4/maintain-question")
+    }
+    else if (questionOne == "closingAndRestoring"){
+        response.redirect("/v4/close-company-question")
     }
     else if (questionOne == "penalties"){
         response.redirect("/v4/penalties-question")
     }
     else if (questionOne == "tech"){
-        response.redirect("/v4/generic-outcome")
+        response.redirect("/v4/technical-help-question")
     }
     else if (questionOne == "report"){
         response.redirect("/v4/company-complaint-question")
@@ -140,6 +143,23 @@ router.post('/v4/maintain-question', function(request, response) {
 // })
 
 
+// closing filter question radio routing 
+
+router.post('/v4/close-company-question', function(request, response) {
+
+    var closingQuestion = request.session.data['closingFilter']
+    if (closingQuestion == "closingCompany"){
+        response.redirect("/v4/generic-outcome")
+    } else if (closingQuestion == "restoring"){
+        response.redirect("/v4/generic-outcome")
+    } else if (closingQuestion == "objecting"){
+        response.redirect("/v4/generic-outcome")
+    }
+     else {
+        response.redirect("/v4/outcome-something-else")
+    }
+})
+
 
 
 
@@ -159,6 +179,22 @@ router.post('/v4/penalties-question', function(request, response) {
 })
 
 
+// technical help filter question radio routing - incomplete
+
+router.post('/v4/technical-help-question', function(request, response) {
+
+    var techQuestion = request.session.data['techFilter']
+    if (techQuestion == "authCodeProblem"){
+        response.redirect("/v4/generic-outcome")
+    } else if (techQuestion == "SignIn"){
+            response.redirect("/v4/outcome-sign-in")
+    } else {
+        response.redirect("/v4/outcome-something-else")
+    }
+})
+
+
+
 // report filter question radio routing - incomplete
 
 router.post('/v4/company-complaint-question', function(request, response) {
@@ -166,13 +202,21 @@ router.post('/v4/company-complaint-question', function(request, response) {
     var complaintQuestion = request.session.data['complaintFilter']
     if (complaintQuestion == "usingPersonalDetails"){
         response.redirect("/v4/outcome-personal-details")
-    } else if (complaintQuestion == "complaintSomethingElse"){
+    } else if (complaintQuestion == "reportInfo"){
+        response.redirect("/v4/generic-outcome")
+    } 
+    else if (complaintQuestion == "authCodeProblem"){
+        response.redirect("/v4/generic-outcome")
+    } 
+    else if (complaintQuestion == "companyComplaint"){
+        response.redirect("/v4/generic-outcome")
+    } 
+    else if (complaintQuestion == "object2"){
+        response.redirect("/v4/generic-outcome")
+    } 
+    else if (complaintQuestion == "complaintSomethingElse"){
             response.redirect("/v4/outcome-something-else")
-    } else if (complaintQuestion == "cantSignIn"){
-        response.redirect("/v4/outcome-sign-in")
-    } else if (complaintQuestion == "companyComplaint"){
-        response.redirect("/v4/outcome-company-complain")
-    }
+    } 
     else {
         response.redirect("/v4/generic-outcome")
     }
