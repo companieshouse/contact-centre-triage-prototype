@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">{{ serviceName }} </span>
+      <h1 class="govuk-heading-xl">Design history</h1>
+
+      <p class="govuk-body">This page shows the history of the design of the {{ serviceName }} service.</p>
+
+      <h2 class="govuk-heading-m">Version 4</h2>
+      <h2 class="govuk-heading-m">Version 3</h2>
+      <h2 class="govuk-heading-m">Version 2</h2>
+      
+      
+    <h2 class="govuk-heading-m">Version 1 - October 2024</h2>
+      <ul class="govuk-list govuk-list--bullet">
+         
+          <li>First version of triage style site, designed to be in keeping with SmartAnswers style after UX review work. SmartAnswers is a GDS publishing tool and would mean we could build the triage without significant dev resource. Alternatively, we would also be able to develop a service in this style if GDS couldn't or we decided we wanted to.  </li>
+          <li>SmartAnswers consists of a start page, question pages, and outcome pages </li>
+          <li>First version had 5 categories on first question page and 'something else'</li>
+          <li> </li>
+      </ul>
+       
+      
+
+</div>
+</div>
+
+
+{% endblock %}
