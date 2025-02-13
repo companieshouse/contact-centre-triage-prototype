@@ -60,7 +60,7 @@ router.post('/v4/questions/register-question', function(request, response) {
     if (registerQuestion == "registeringCompany"){
         response.redirect("/v4/outcomes/register-outcome")
     } else if (registerQuestion == "authCode1"){
-            response.redirect("/v4/outcomes/generic-outcome")
+            response.redirect("/v4/outcomes/outcome-auth-code")
     }
      else {
         response.redirect("/v4/outcomes/outcome-something-else")
@@ -96,21 +96,21 @@ router.post('/v4/questions/maintain-question', function(request, response) {
 
     var maintainQuestion = request.session.data['maintainFilter']
     if (maintainQuestion == "registeredEmailAddress"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-email-address")
     } else if (maintainQuestion == "registeredOfficeAddress"){
-            response.redirect("/v4/outcomes/generic-outcome")
+            response.redirect("/v4/outcomes/outcome-office-address")
     } else if (maintainQuestion == "directors"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-directors")
     } else if (maintainQuestion == "secretaries"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-secretaries")
     } 
     else if (maintainQuestion == "personsSignificantControl"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-PSCs")
     } 
     else if (maintainQuestion == "shareCapital"){
         response.redirect("/v4/outcomes/outcome-shares")
     } else if (maintainQuestion == "companyName"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-company-name")
     } 
     else if (maintainQuestion == "trackFiling2"){
         response.redirect("/v4/outcomes/outcome-track-filing")
@@ -151,9 +151,9 @@ router.post('/v4/questions/close-company-question', function(request, response) 
     if (closingQuestion == "closingCompany"){
         response.redirect("/v4/outcomes/outcome-closing")
     } else if (closingQuestion == "restoring"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-restoring")
     } else if (closingQuestion == "objecting"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-objecting-strike-off")
     }
      else {
         response.redirect("/v4/outcomes/outcome-something-else")
@@ -171,6 +171,10 @@ router.post('/v4/questions/penalties-question', function(request, response) {
     var penaltiesQuestion = request.session.data['penaltiesFilter']
     if (penaltiesQuestion == "appealingPenalty"){
         response.redirect("/v4/outcomes/outcome-appeal")
+    } else if (penaltiesQuestion == "payingPenalty"){
+        response.redirect("/v4/outcomes/outcome-paying")
+    } else if (penaltiesQuestion == "moreTime"){
+        response.redirect("/v4/outcomes/outcome-filing-extension")
     } else if (penaltiesQuestion == "penaltiesSomethingElse"){
             response.redirect("/v4/outcomes/outcome-something-else")
     } else {
@@ -185,7 +189,7 @@ router.post('/v4/questions/technical-help-question', function(request, response)
 
     var techQuestion = request.session.data['techFilter']
     if (techQuestion == "authCodeProblem"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-auth-code")
     } else if (techQuestion == "SignIn"){
             response.redirect("/v4/outcomes/outcome-sign-in")
     } else {
@@ -203,16 +207,16 @@ router.post('/v4/questions/company-complaint-question', function(request, respon
     if (complaintQuestion == "usingPersonalDetails"){
         response.redirect("/v4/outcomes/outcome-personal-details")
     } else if (complaintQuestion == "reportInfo"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-incorrect-info")
     } 
     else if (complaintQuestion == "authCodeProblem"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-auth-code")
     } 
     else if (complaintQuestion == "companyComplaint"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-company-complain")
     } 
     else if (complaintQuestion == "object2"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-objecting-strike-off")
     } 
     else if (complaintQuestion == "complaintSomethingElse"){
             response.redirect("/v4/outcomes/outcome-something-else")
