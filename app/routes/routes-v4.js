@@ -79,7 +79,7 @@ router.post('/v4/questions/filing-question', function(request, response) {
     } else if (filingQuestion == "trackFiling"){
         response.redirect("/v4/outcomes/outcome-track-filing")
     } else if (filingQuestion == "requestingTime"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-filing-extension")
     } else if (filingQuestion == "somethingElse"){
         response.redirect("/v4/outcomes/outcome-something-else")
     } 
@@ -149,7 +149,7 @@ router.post('/v4/questions/close-company-question', function(request, response) 
 
     var closingQuestion = request.session.data['closingFilter']
     if (closingQuestion == "closingCompany"){
-        response.redirect("/v4/outcomes/generic-outcome")
+        response.redirect("/v4/outcomes/outcome-closing")
     } else if (closingQuestion == "restoring"){
         response.redirect("/v4/outcomes/generic-outcome")
     } else if (closingQuestion == "objecting"){
