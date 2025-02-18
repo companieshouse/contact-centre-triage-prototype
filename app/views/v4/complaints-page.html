@@ -1,0 +1,206 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Mainstream guide example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Organisations",
+        href: "#"
+      },
+      {
+        text: "Companies House",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+
+      <h1 class="govuk-heading-xl">
+       Complaints procedure
+      </h1>
+      <p class="govuk-body-l">How to make a complaint about our level of service or information on the Companies House register.</p>
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+
+
+          
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="#the-complaints-process">
+                The complaints process
+              </a>
+            </li>
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+               <a href="#the-complaints-process">
+              What complaints we can help with
+              </a>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#how-to-complain-about-companies-house">
+                How to complain about Companies House
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#what-happens-next">
+                What happens next
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#if-youre-not-satisfied">
+                If you're not satisfied
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <h2 class="govuk-heading-m" id="the-complaints-process">
+        The compaints process
+      </h2>
+      
+      <p> There are 3 stages to our complaints process:</p>
+              <ol class="steps">
+                <li><p>The team or our contact centre.</p></li>
+                <li><p>Response from customer service team.</p></li>
+                <li><p>Escalation to the head of service delivery.</p></li>
+              </ol>
+
+      <h2 class="govuk-heading-m" id="what-complaints-we-can-help-with">
+        What complaints we can help with
+      </h2>
+      
+      <p>This process deals with complaints about: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the accuracy of information on the companies register</li>
+          <li>the level of service we’ve provided</li>
+        </ul>
+      <p>There are separate procedures if you want to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a class="govuk-link" href="https://www.gov.uk/complain-about-a-limited-company">complain about a limited company</a></li>
+          <li><a class="govuk-link" href="https://www.gov.uk/government/publications/reporting-fraud-about-a-company-to-companies-house">report fraud about a company</a></li>
+
+          <div class="govuk-inset-text">
+            We do not deal with <a class="govuk-link" href="https://www.gov.uk/consumer-protection-rights">consumer rights</a> complaints about goods or services.
+          </div>
+     
+
+
+      <h2 class="govuk-heading-m" id="how-to-complain-about-companies-house">
+        How to complain about Companies House
+      </h2>
+      
+      <p>Content goes here.</p>
+
+      <h2 class="govuk-heading-m" id="what-happens-next">
+        What happens next
+      </h2>
+      
+      <p>A member of Companies House will reply in writing or by telephone within 10 working days.</p>
+
+      <p>If we cannot give a full response in this time, we’ll tell you what we’re doing and when you can expect a full reply. This might happen if your complaint needs more detailed investigation. We’ll give a contact name and a complaint reference number.</p>
+
+      <h2 class="govuk-heading-m" id="if-youre-not-satisfied">
+        If you're not satisfied
+      </h2>
+      
+      <p>Ask us to review your complaint at the next stage of the process.</p>
+      <p>Our customer service team will review your complaint and respond.</p>
+      <p>In some situations we may not be able to help you, for example, if you’re not happy about a legal requirement and escalation will not change the outcome.</p>
+      <p>At stage 3, the Head of Operational Delivery will respond.</p>
+      <p>This is the final stage and completes our internal complaints process.</p>
+
+
+      <h2 class="govuk-heading-s">
+        Independent complaint adjudicators
+      </h2>
+      
+      <p>If your complaint is not resolved, you can ask us to refer your complaint to the <a class="govuk-link" href="#">independent adjudicators</a>. You must finish the internal complaints process first. </p>
+      <p>Our customer services team can refer your complaint. We’ll tell you about this in more detail if you reach this stage.</p>
+      <p>The adjudicators only investigate complaints about:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>level of service</li>
+          <li>mistakes</li>
+          <li>our complaint handling</li>
+        </ul>
+      <p>Your complaint must be less than 6 months old.</p>
+      <p>If you're not happy with the adjudicators' decision, you can ask <a class="govuk-link" href="http://www.parliament.uk/mps-lords-and-offices/mps/">your MP</a> to take your complaint to the <a class="govuk-link" href="http://www.ombudsman.org.uk/">Parliamentary and Health Service Ombudsman</a>.</p>
+
+      <p>
+        <a href="#">
+          View a printable version of the whole guide
+        </a>
+      </p>
+
+    </div>
+
+    {# <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div> #}
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
