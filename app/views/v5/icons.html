@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and self-employed",
+        href: "#"
+      },
+      {
+        text: "Running a limited company",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="" method="post">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+      <p>Contact Companies House if you have a query about:</p>
+    </div> 
+    </div> 
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Find address
+</button>
+  </div>
+</div>
+
+{% endblock %}
