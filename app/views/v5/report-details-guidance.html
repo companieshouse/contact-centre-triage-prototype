@@ -1,0 +1,244 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Mainstream guide example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Business and industry",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+       <form class="form" action="/report-details-guidance" method="post">
+
+
+<span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">
+        Report a company using your personal details without your permission
+      </h1>
+
+      <p class="govuk-body-l">How to tell Companies House that a company is using personal information such as your name and address without your consent.</p>
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="#">
+                If your name or address has been used without your consent
+              </a>
+            </li>
+            <li aria-current="true" class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+              How to tell Companies House your details have been used without permission
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+                What happens next
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+                More guidance on fraud and identity theft
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#">
+                Registrar’s rules and powers
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+    <p class="govuk-body">If a company has given your personal details to Companies House without your permission, you need to let us know.</p>
+
+
+    <p class="govuk-body">This includes if a company has used your:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>name</li>
+          <li>address</li>
+        </ul>
+
+        <p class="govuk-body">We can usually remove your information from the Companies House register if there's enough evidence to support your case.</p>
+    
+    
+      <h2 class="govuk-heading-m">
+        If your name or address has been used without your consent
+      </h2>
+      
+     <p class="govuk-body">You should tell Companies House if your name has been used without consent for any roles in a company, for example:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>director</li>
+          <li>company secretary</li>
+          <li>person with significant control (PSC) or beneficial owner</li>
+        </ul>
+
+
+        <p class="govuk-body">You should also tell Companies House if a company has used your address without consent, as a:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>registered office address</li>
+          <li>correspondence address</li>
+          <li>home address</li>
+        </ul>
+
+
+      <h2 class="govuk-heading-m">
+        How to tell Companies House your details have been used without permission
+      </h2>
+
+      <p class="govuk-body">SPACE FOR NEW FORMS CONTENT.</p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p class="govuk-body">We may contact you for more information or evidence to support your case.</p>
+
+      <p class="govuk-body">Once we’ve processed your case, we’ll email to let you know if we can remove your details from the Companies House register.</p>
+
+      <div class="govuk-inset-text">
+          As we’re dealing with a high volume of reports at the moment, it may take a while to get back to you.
+      </div>
+
+      <p class="govuk-body">You do not need to call Companies House, as we cannot resolve this type of issue over the phone. Do not report your case more than once, as this will delay your case.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        More guidance on fraud and identity theft
+      </h2>
+
+
+      <p class="govuk-body">The process is different if you want to <a href="https://www.gov.uk/complain-company" class="govuk-link">complain about a company</a>. For example, if you were sold a faulty product or if you think it’s a scam.</p>
+
+      <p class="govuk-body">Action Fraud is the national fraud and cyber crime reporting centre for the police.</p>
+
+      <p class="govuk-body">If a crime has been committed, you may need to report your case to <a href="https://www.actionfraud.police.uk/" class="govuk-link">Action Fraud online</a> or call them on 0300 123 2040.</p>
+
+      <p class="govuk-body">If the company’s registered in Scotland, you’ll need to report this to <a href="https://www.scotland.police.uk/" class="govuk-link">Police Scotland</a>.</p>
+
+      <p class="govuk-body">For more guidance, visit <a href="https://www.citizensadvice.org.uk/" class="govuk-link">Citizen’s Advice</a> or <a href="https://www.cifas.org.uk/" class="govuk-link">Cifas</a>, the UK’s fraud prevention service.</p>
+
+
+      <h2 class="govuk-heading-m">
+        Registrar’s rules and powers
+      </h2>
+
+      
+      <p class="govuk-body">The Registrar of Companies can amend or annotate the register in some cases. You can also apply to replace or remove a document or information from the register.</p>
+      <p class="govuk-body">See <a href="https://www.gov.uk/government/collections/companies-house-forms-for-limited-companies#registrar's-powers" class="govuk-link">Companies House forms for registrar’s powers</a>.</p>
+      <p class="govuk-body">Read our guidance on what <a href="https://www.gov.uk/government/publications/company-registrars-rules-and-powers" class="govuk-link">the registrar’s powers</a> are and when we’ll use them.</p>
+
+
+      <nav class="govuk-prototype-kit-common-templates-pagination" role="navigation" aria-label="Pagination">
+
+      {# {{ govukPagination({
+        previous: {
+          labelText: "Page 1 title",
+          href: "#"
+        },
+        next: {
+          labelText: "Page 3 title",
+          href: "#"
+        }
+      }) }} #}
+
+      <p>
+        <a href="#">
+          View a printable version of the whole guide
+        </a>
+      </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/government/publications/apply-to-change-a-companys-disputed-registered-office-address-rp07">
+                Apply to change an address (RP07)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/guidance/removing-your-home-address-from-the-companies-house-register">
+                Removing your home address from the Companies House register
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gov.uk/government/publications/apply-to-remove-your-home-address-from-the-public-register-sr01">
+                Apply to remove your home address from the Companies House register (SR01)
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+      </aside>
+
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-body-s" id="subsection-title-2">
+          Collection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="https://www.gov.uk/government/collections/companies-house-guidance-for-limited-companies-partnerships-and-other-company-types">
+                Guidance for limited companies, partnerships and other company types
+              </a>
+            </li>
+           
+            
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+
+  </main>
+</div>
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
