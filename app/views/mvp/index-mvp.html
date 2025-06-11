@@ -1,0 +1,385 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+  <span class="govuk-caption-xl">MVP</span>
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    {{ govukWarningText({
+      text: "This prototype is being actively worked on - things might break or change very quickly",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <h2 class="govuk-heading-m" >Links</h2>
+    <p class="govuk-body"><a href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1730200318654/c6711bb189e99507844d5015b001b7e7e90e9217?sender=ub36768ef277a25eb48103026" class="govuk-link">Mural with journey flow</a>
+    </p>
+
+    {# <p class="govuk-body"><a class="govuk-link" href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1739882555253/a392b694b309c21ee06d5e350cb0f29856a5ac2e">Mural from round 5 user testing of Version 4</a></p> 
+
+    <p class="govuk-body"><a class="govuk-link" href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1740656603288/e1574b6f127e31467fcdbce4933483c52d149b54">Mural from round 6 user testing of Version 4</a></p>  #}
+
+
+    {# <p class="govuk-body"><a class="govuk-link" href="https://app.mural.co/t/companieshouse8589/m/companieshouse8589/1730986973846/b77994ac275be8aa710a802ed62f7d2ef701dee3">Mural for round 1 testing</a></p> #}
+
+      {# <ul class="govuk-list govuk-list--bullet">
+        <li><a class="govuk-link" href="/v1/start">Start </a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+        <li><a class="govuk-link" href="/v1/question-one">First question page</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+        <li><a class="govuk-link" href="/v1/filing-question">Filing filter question page</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+        <li><a class="govuk-link" href="/v1/penalties-question">Penalties filter question page</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+        <li><a class="govuk-link" href="/v1/company-complaint-question">Report or complain filter question page</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+       
+      </ul> #}
+
+      <h2 class="govuk-heading-m" >Version 6 screens</h2>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Page </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/start">Start </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/question-one">First question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+<h2 class="govuk-heading-m" >Question pages</h2>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Page </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+   
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/register-question">Registering a company question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+
+     <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/filing-question">Filing confirmation and accounts question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/maintain-question">Company updates question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/close-company-question">Closing and restoring question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+
+    {# <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/filing-sub-question">Change or update - filing sub filter question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr> #}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/penalties-question">Penalties filter question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/technical-help-question">Technical help question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/questions/company-complaint-question">Report or complain filter question page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+      <h2 class="govuk-heading-m" >Outcome pages</h2>
+          {# <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="/v1/generic-outcome">Generic placeholder outcome page </a></li>
+            <li><a class="govuk-link" href="/v1/outcome-something-else">Something else </a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+            <li><a class="govuk-link" href="/v1/register-outcome">Register a company</a></li>
+             <li><a class="govuk-link" href="/v1/outcome-conf-stat">Confirmation statement</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+            <li><a class="govuk-link" href="/v1/outcome-accounts">Accounts </a></li>
+            <li><a class="govuk-link" href="/v1/outcome-appeal">Appeal a penalty  </a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+            <li><a class="govuk-link" href="/v1/outcome-personal-details">Report a company using personal details without permission</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+            <li><a class="govuk-link" href="/v1/outcome-sign-in">Issue with signing in</a><strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong></li>
+            <li><a class="govuk-link" href="/v1/outcome-track-filing">Track a filing</a></li>
+            
+          </ul> #}
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Page </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/generic-outcome">Generic placeholder outcome page </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--grey">
+          Not applicable
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-something-else">Something else </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/register-outcome">Register a company</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-conf-stat">Confirmation statement</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-accounts">Accounts </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Not started
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-shares">Share capital </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          In progress
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-appeal">Appeal a penalty  </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-personal-details">Report a company - personal details without permission</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-sign-in">Issue with signing in</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-track-filing">Track a filing</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/outcomes/outcome-company-complain">Complain about a company</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Ready for testing
+        </strong>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Other pages</h2>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Page </th>
+      <th class="govuk-table__header" scope="col"> Status </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/check-service-status">Check service status </a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--red">
+          Not ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/complaints-page">Complaints page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--red">
+          Not ready for testing
+        </strong>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/mvp/report-details-guidance">Reporting misuse of address guidance page</a>
+      </td>
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--red">
+          Not ready for testing
+        </strong>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
